@@ -15,7 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Syne:wght@600;700;800&display=swap"
         rel="stylesheet">
-
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.0.0/dist/lenis.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -51,6 +51,148 @@
     </header>
 
     <main>
+<section class="hero" id="hero">
+    <div id="hero-canvas" class="hero__canvas"></div>
+    <div class="container hero__container">
+        <div class="hero__content">
+            <span class="hero__badge" data-aos="fade-up">Технология нового поколения</span>
+            <h1 class="hero__title" data-aos="fade-up" data-aos-delay="200">
+                <?= $domainTitle ?>: Постройте карьеру, которая <span class="text-gradient">работает на вас</span>
+            </h1>
+            <p class="hero__text" data-aos="fade-up" data-aos-delay="400">
+                Инновационная платформа для оценки перспектив проекта и переосмысления подхода к вашему развитию.
+                Откройте новые возможности уже сегодня.
+            </p>
+            <div class="hero__actions" data-aos="fade-up" data-aos-delay="600">
+                <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                <a href="#strategies" class="btn btn--outline">Узнать детали</a>
+            </div>
+        </div>
+
+        <div class="hero__stats" data-aos="fade-left" data-aos-delay="800">
+            <div class="stat-item">
+                <span class="stat-item__num">500+</span>
+                <span class="stat-item__label">кейсов роста</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-item__num">15+</span>
+                <span class="stat-item__label">стран ЕС</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="strategies" id="strategies">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">Методологии, доказавшие эффективность</span>
+            <h2 class="section-title">Стратегии роста на базе инноваций</h2>
+            <p class="section-desc">Решения, которые меняют правила игры в вашей профессиональной жизни.</p>
+        </div>
+
+        <div class="strategies__grid">
+            <div class="strategy-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="strategy-card__icon">
+                    <i data-lucide="layers"></i>
+                </div>
+                <h3 class="strategy-card__title">Skill Mapping</h3>
+                <p class="strategy-card__text">
+                    Передовая цифровая инфраструктура для анализа ваших компетенций и выявления зон прорыва.
+                </p>
+                <ul class="strategy-card__list">
+                    <li>Оценить перспективы проекта</li>
+                    <li>AI-инструменты для задач</li>
+                </ul>
+            </div>
+
+            <div class="strategy-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="strategy-card__icon">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h3 class="strategy-card__title">Быстрый старт</h3>
+                <p class="strategy-card__text">
+                    Удобная адаптация без сложностей. Пошаговый путь, понятный каждому, кто стремится к апгрейду.
+                </p>
+                <ul class="strategy-card__list">
+                    <li>Подключение за 2 минуты</li>
+                    <li>Легко разобраться без опыта</li>
+                </ul>
+            </div>
+
+            <div class="strategy-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="strategy-card__icon">
+                    <i data-lucide="trending-up"></i>
+                </div>
+                <h3 class="strategy-card__title">Пассивный рост</h3>
+                <h3 class="strategy-card__title"></h3>
+                <p class="strategy-card__text">
+                    Технологии, которые работают на вас, создавая фундамент для долгосрочного пассивного дохода.
+                </p>
+                <ul class="strategy-card__list">
+                    <li>Практики сегодня</li>
+                    <li>Стратегия на базе AI</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cases" id="cases">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">Результаты, которые говорят сами за себя</span>
+            <h2 class="section-title">Воплотите мечты в реальность</h2>
+        </div>
+
+        <div class="cases__grid">
+            <div class="case-card case-card--large" data-aos="fade-up">
+                <div class="case-card__content">
+                    <span class="case-tag">Tech Lead Transformation</span>
+                    <h3>Из Senior Developer в CTO за 6 месяцев</h3>
+                    <p>Использовали передовую цифровую инфраструктуру для анализа лидерских компетенций. Решения,
+                        которые меняют правила игры.</p>
+                    <div class="case-metric">
+                        <span class="case-metric__val">+120%</span>
+                        <span class="case-metric__label">к доходу</span>
+                    </div>
+                </div>
+                <div class="case-card__image">
+                    <img src="/img/one.jpg" alt="Case Study">
+                </div>
+            </div>
+
+            <div class="case-card case-card--small" data-aos="fade-up" data-aos-delay="100">
+                <div class="case-card__content">
+                    <span class="case-tag">AI Integration</span>
+                    <h4>Оптимизация процессов</h4>
+                    <p>Внедрение AI-инструментов для реальных задач управления командой.</p>
+                    <div class="case-status">Платформа года 2026</div>
+                </div>
+            </div>
+
+            <div class="case-card case-card--small" data-aos="fade-up" data-aos-delay="200">
+                <div class="case-card__content">
+                    <span class="case-tag">Switching Careers</span>
+                    <h4>Релокация в Италию</h4>
+                    <p>Полный карьерный апгрейд с адаптацией под европейский рынок.</p>
+                    <div class="case-metric case-metric--mini">
+                        <i data-lucide="check-circle"></i> <span>Успешно</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-card case-card--medium" data-aos="fade-up" data-aos-delay="300">
+                <div class="case-card__content">
+                    <span class="case-tag">Career Boost</span>
+                    <h3>Постройте карьеру, которая работает на вас</h3>
+                    <p>Стратегия роста на базе инноваций помогла специалисту из Рима выйти на глобальный рынок
+                        консалтинга.</p>
+                </div>
+                <div class="case-card__icon-box">
+                    <i data-lucide="trending-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
@@ -111,11 +253,13 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.0/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="script.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script src="script.js"></script>
 </body>
 
 </html>
