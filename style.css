@@ -743,3 +743,135 @@ a {
     color: var(--color-light);
 }
 */
+/* --- MENTORS SECTION --- */
+.mentors {
+    padding: 120px 0;
+    background: #fff;
+}
+
+.mentors__container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.section-header--left {
+    text-align: left;
+    margin: 0 0 50px 0;
+}
+
+/* Mentor List Items */
+.mentor-item {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+.mentor-item__num {
+    font-family: var(--font-accent);
+    font-size: 0.9rem;
+    opacity: 0.4;
+    margin-right: 40px;
+    font-weight: 700;
+}
+
+.mentor-item__name {
+    font-family: var(--font-accent);
+    font-size: 1.8rem;
+    line-height: 1.2;
+    transition: var(--transition);
+}
+
+.mentor-item__role {
+    font-size: 0.95rem;
+    opacity: 0.6;
+    margin-top: 5px;
+}
+
+.mentor-item__icon {
+    margin-left: auto;
+    opacity: 0;
+    transform: translate(-20px, 20px);
+    transition: var(--transition);
+    color: var(--color-accent);
+}
+
+/* Hover States */
+.mentor-item:hover,
+.mentor-item.active {
+    padding-left: 20px;
+}
+
+.mentor-item:hover .mentor-item__name,
+.mentor-item.active .mentor-item__name {
+    color: var(--color-accent);
+}
+
+.mentor-item:hover .mentor-item__icon,
+.mentor-item.active .mentor-item__icon {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Right Preview */
+.mentors__preview {
+    position: relative;
+    height: 600px;
+}
+
+.mentor-img-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+}
+
+.mentor-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.1) rotate(2deg);
+    transition: opacity 0.6s ease, transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.mentor-img.active {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+.mentor-quote {
+    position: absolute;
+    bottom: -30px;
+    left: -40px;
+    background: var(--color-dark);
+    color: var(--color-light);
+    padding: 30px;
+    border-radius: 24px;
+    max-width: 320px;
+    font-size: 0.95rem;
+    font-style: italic;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .mentors__container {
+        grid-template-columns: 1fr;
+    }
+
+    .mentors__preview {
+        display: none;
+        /* Скрываем превью на мобилках для лаконичности */
+    }
+}

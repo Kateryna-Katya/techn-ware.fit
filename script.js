@@ -141,3 +141,43 @@ function initNavigation() {
         });
     }
 }
+// Внутри DOMContentLoaded или отдельной функцией
+function initMentors() {
+    const mentorItems = document.querySelectorAll('.mentor-item');
+    const mentorImages = document.querySelectorAll('.mentor-img');
+    const quoteText = document.getElementById('mentor-quote-text');
+
+    const quotes = {
+        "1": "«Технологии, которые работают на вас — это не будущее, это ваша текущая стратегия роста.»",
+        "2": "«Воплотите мечты в реальность через четкое планирование и правильные AI-инструменты.»",
+        "3": "«Постройте карьеру, которая работает на вас. Ваш опыт стоит большего на рынке ЕС.»"
+    };
+
+    mentorItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            const id = item.getAttribute('data-mentor');
+
+            // Update Active Class for List
+            mentorItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+
+            // Update Image
+            mentorImages.forEach(img => {
+                img.classList.remove('active');
+                if (img.getAttribute('data-mentor-img') === id) {
+                    img.classList.add('active');
+                }
+            });
+
+            // Update Quote with small fade
+            quoteText.style.opacity = 0;
+            setTimeout(() => {
+                quoteText.innerText = quotes[id];
+                quoteText.style.opacity = 1;
+            }, 200);
+        });
+    });
+}
+
+// Вызови её в script.js
+initMentors();
